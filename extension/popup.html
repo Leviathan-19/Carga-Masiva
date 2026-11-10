@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Salesforce User Bulk Creator</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo-area">
+        <span class="icon">⚡</span>
+        <div>
+          <h2>SF Bulk User Creator</h2>
+          <span class="badge">Sesión Activa</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Paso 1: Carga de Archivo -->
+    <section class="section file-section">
+      <label class="label-title">1. Seleccionar Dataset (.CSV o .JSON)</label>
+      <div class="drop-zone" id="dropZone">
+        <input type="file" id="fileInput" accept=".csv, .json" />
+        <div class="drop-zone-text">
+          <span class="upload-icon">📁</span>
+          <p id="fileNameDisplay">Haz clic para cargar o arrastra tu archivo aquí</p>
+          <small>Columnas: FirstName, LastName, Email, Username, UserLicense, Profile...</small>
+        </div>
+      </div>
+      <div id="fileStats" class="stats-row hidden">
+        <span>Total registros: <strong id="totalRecords">0</strong></span>
+        <span>Formato: <strong id="fileType">-</strong></span>
+      </div>
+    </section>
+
+    <!-- Paso 2: Opciones de Ejecución -->
+    <section class="section options-section">
+      <label class="label-title">2. Opciones de Automatización</label>
+      <div class="option-row">
+        <label for="delayInput">Pausa humana por campo (ms):</label>
+        <input type="number" id="delayInput" value="250" min="100" max="2000" step="50" style="width: 70px;">
+      </div>
+      <div class="option-row checkbox-row">
+        <input type="checkbox" id="uncheckNotifyPass" checked>
+        <label for="uncheckNotifyPass">Desmarcar "Generate new password..."</label>
+      </div>
+    </section>
+
+    <!-- Paso 3: Controles y Progreso -->
+    <section class="section controls-section">
+      <div class="btn-group">
+        <button id="btnStart" class="btn btn-primary" disabled>▶ Iniciar Carga</button>
+        <button id="btnStop" class="btn btn-danger" disabled>⏹ Detener</button>
+      </div>
+
+      <div class="progress-container">
+        <div class="progress-bar">
+          <div id="progressBarFill" class="progress-fill" style="width: 0%;"></div>
+        </div>
+        <div class="progress-status">
+          <span id="progressText">0 / 0 procesados</span>
+          <span class="counters">
+            <span class="count-success">✔ <span id="countSuccess">0</span></span>
+            <span class="count-error">✖ <span id="countError">0</span></span>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Registro de Actividad -->
+    <section class="section log-section">
+      <div class="log-header">
+        <label class="label-title">Registro de Actividad</label>
+        <button id="btnClearLog" class="btn-link">Limpiar</button>
+      </div>
+      <div id="logConsole" class="log-console">
+        <div class="log-entry info">Esperando archivo y pestaña de Salesforce...</div>
+      </div>
+    </section>
+
+    <!-- Descarga de Resultados -->
+    <footer class="footer">
+      <button id="btnDownloadErrors" class="btn btn-outline" disabled>📥 Descargar Fallidos (CSV)</button>
+      <button id="btnDownloadSuccess" class="btn btn-outline" disabled>📥 Descargar Exitosos (CSV)</button>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
+

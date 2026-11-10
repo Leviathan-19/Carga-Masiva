@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Salesforce User Bulk Creator",
+  "version": "1.0.0",
+  "description": "Carga masiva automatizada de usuarios en Salesforce desde archivos CSV o JSON directamente en tu sesión activa.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://*.salesforce.com/*",
+    "https://*.force.com/*",
+    "https://*.my.salesforce.com/*",
+    "https://*.lightning.force.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Carga Masiva de Usuarios Salesforce"
+  }
+}
+

@@ -1,0 +1,35 @@
+{
+  "name": "salesforce-carga-masiva-playwright",
+  "version": "1.0.0",
+  "description": "Automatización con Playwright y TypeScript para carga masiva de usuarios en Salesforce vía CDP",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/index.ts",
+    "start:csv": "ts-node src/index.ts --file=data/plantilla_usuarios.csv",
+    "start:json": "ts-node src/index.ts --file=data/usuarios_ejemplo.json",
+    "validate": "ts-node src/index.ts --file=data/plantilla_usuarios.csv --dry-run"
+  },
+  "keywords": [
+    "salesforce",
+    "playwright",
+    "automation",
+    "bulk-upload",
+    "cdp",
+    "typescript"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parse": "^5.5.6",
+    "csv-stringify": "^6.5.1",
+    "dotenv": "^16.4.5",
+    "playwright": "^1.49.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}
+
