@@ -12,7 +12,22 @@
     "https://*.salesforce.com/*",
     "https://*.force.com/*",
     "https://*.my.salesforce.com/*",
-    "https://*.lightning.force.com/*"
+    "https://*.lightning.force.com/*",
+    "https://*.salesforce-setup.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.salesforce.com/*",
+        "https://*.force.com/*",
+        "https://*.my.salesforce.com/*",
+        "https://*.lightning.force.com/*",
+        "https://*.salesforce-setup.com/*"
+      ],
+      "js": ["content.js"],
+      "all_frames": true,
+      "run_at": "document_idle"
+    }
   ],
   "action": {
     "default_popup": "popup.html",

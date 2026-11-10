@@ -1,0 +1,155 @@
+[
+  {
+    "nombre_col": "ID de usuario",
+    "referencia_html": "00NhO000000Grmj",
+    "activo": true,
+    "etiqueta_salesforce": "Id de propietario de origen",
+    "tipo_control": "input_text",
+    "descripcion": "ID numérico de usuario en HubSpot. Se asigna en el campo personalizado de migración."
+  },
+  {
+    "nombre_col": "Nombre",
+    "referencia_html": "name_firstName",
+    "activo": true,
+    "etiqueta_salesforce": "First Name",
+    "tipo_control": "input_text",
+    "descripcion": "Nombre de pila del usuario."
+  },
+  {
+    "nombre_col": "Apellidos",
+    "referencia_html": "name_lastName",
+    "activo": true,
+    "etiqueta_salesforce": "Last Name",
+    "tipo_control": "input_text",
+    "descripcion": "Apellidos del usuario. Campo obligatorio en Salesforce."
+  },
+  {
+    "nombre_col": "Correo",
+    "referencia_html": "Email",
+    "activo": true,
+    "etiqueta_salesforce": "Email",
+    "tipo_control": "input_text",
+    "descripcion": "Correo institucional. También se usa para autogenerar Username, Alias y Nickname si no están presentes."
+  },
+  {
+    "nombre_col": "Último inicio de sesión",
+    "referencia_html": null,
+    "activo": false,
+    "etiqueta_salesforce": null,
+    "tipo_control": "ignorado",
+    "descripcion": "Metadato de auditoría del sistema de origen. No se carga en la creación."
+  },
+  {
+    "nombre_col": "Última actividad",
+    "referencia_html": null,
+    "activo": false,
+    "etiqueta_salesforce": null,
+    "tipo_control": "ignorado",
+    "descripcion": "Metadato de auditoría del sistema de origen."
+  },
+  {
+    "nombre_col": "Creado en",
+    "referencia_html": null,
+    "activo": false,
+    "etiqueta_salesforce": null,
+    "tipo_control": "ignorado",
+    "descripcion": "Fecha de creación histórica en el sistema de origen."
+  },
+  {
+    "nombre_col": "Equipo primario",
+    "referencia_html": null,
+    "activo": false,
+    "etiqueta_salesforce": null,
+    "tipo_control": "ignorado",
+    "descripcion": "Equipo o agencia del usuario (ej. Agencia Matriz Cuenca). No marcado para carga en esta fase."
+  },
+  {
+    "nombre_col": "Equipos adicionales",
+    "referencia_html": null,
+    "activo": false,
+    "etiqueta_salesforce": null,
+    "tipo_control": "ignorado",
+    "descripcion": "Equipos secundarios en origen."
+  },
+  {
+    "nombre_col": "Conjuntos de permisos",
+    "referencia_html": "Profile",
+    "activo": true,
+    "etiqueta_salesforce": "Profile",
+    "tipo_control": "select_picklist",
+    "descripcion": "Define el Perfil de Salesforce según el rol (ej. Superadministrador, Equipo de ventas, Jefe de agencias)."
+  },
+  {
+    "nombre_col": "Desactivada",
+    "referencia_html": null,
+    "activo": false,
+    "etiqueta_salesforce": null,
+    "tipo_control": "ignorado",
+    "descripcion": "En Salesforce los usuarios nuevos se crean como Activos (Active=true) por defecto."
+  },
+  {
+    "nombre_col": "Licencia",
+    "referencia_html": null,
+    "activo": false,
+    "etiqueta_salesforce": null,
+    "tipo_control": "ignorado",
+    "descripcion": "Indicador booleano (Sí/No) de origen."
+  },
+  {
+    "nombre_col": "Autenticación de dos factores habilitada",
+    "referencia_html": null,
+    "activo": false,
+    "etiqueta_salesforce": null,
+    "tipo_control": "ignorado",
+    "descripcion": "Configuración de MFA gestionada por políticas de Salesforce."
+  },
+  {
+    "nombre_col": "Permisos",
+    "referencia_html": "UserPermissions_0",
+    "activo": true,
+    "etiqueta_salesforce": "Permisos y Casillas de Funcionalidad",
+    "tipo_control": "checkbox",
+    "descripcion": "Permisos especiales (ej. Marketing User, Knowledge User)."
+  },
+  {
+    "nombre_col": "Licencias",
+    "referencia_html": "user_license_id",
+    "activo": true,
+    "etiqueta_salesforce": "User License",
+    "tipo_control": "select_picklist",
+    "descripcion": "Tipo de licencia en Salesforce (ej. Salesforce Platform, Salesforce)."
+  },
+  {
+    "nombre_col": "Estado del correo",
+    "referencia_html": null,
+    "activo": false,
+    "etiqueta_salesforce": null,
+    "tipo_control": "ignorado",
+    "descripcion": "Estado de conexión del correo en origen."
+  },
+  {
+    "nombre_col": "Estado del calendario",
+    "referencia_html": null,
+    "activo": false,
+    "etiqueta_salesforce": null,
+    "tipo_control": "ignorado",
+    "descripcion": "Estado de conexión del calendario en origen."
+  },
+  {
+    "nombre_col": "Sincronización del calendario",
+    "referencia_html": null,
+    "activo": false,
+    "etiqueta_salesforce": null,
+    "tipo_control": "ignorado",
+    "descripcion": "Estado de sincronización en origen."
+  },
+  {
+    "nombre_col": "Estado de la invitación",
+    "referencia_html": null,
+    "activo": false,
+    "etiqueta_salesforce": null,
+    "tipo_control": "ignorado",
+    "descripcion": "Estado de invitación en origen (ej. invite_accepted)."
+  }
+]
+
